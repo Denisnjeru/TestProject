@@ -1,0 +1,79 @@
+.tabs-component {
+    width: 100%;
+    margin: $line-height/2 0;
+}
+
+.tabs-component-tabs {
+    @include grid_row;
+    justify-content: flex-start;   
+    padding: $line-height/2 0; 
+    background-color: $color-white-milk;
+    
+    .tabs-component-tab {
+        &:not(:first-child) {
+            border-left: 1px solid $color-gray-light;
+            padding: 0 $line-height/2;
+        }
+
+        &:first-child {
+            padding-right: $line-height/2;
+        }
+
+        .tabs-component-tab-a {
+            padding: $line-height/2 $line-height/2;
+        }
+    }
+
+    .is-active {
+        .tabs-component-tab-a {
+            background-color: $color-blue-light;
+            color: $color-blue-main;
+        }
+    }
+}
+
+.tabs-component-panels {
+    min-height: 30vh;
+    background-color: $color-white-milk;
+    
+    .tab-content {
+        padding: $line-height/2 $line-height/3;
+
+        .title {
+            margin-top: $line-height/4;
+            color: $color-blue-light;
+        }
+    }
+
+    .tabs-component {
+        margin-top: 0;
+    }
+
+    .tabs-component-tabs { 
+        background-color: $color-white-pure;
+        padding: $line-height/2 0;
+
+        .tabs-component-tab {
+            &:not(:first-child) {
+                border-left: none;
+            }
+
+            .tabs-component-tab-a {
+                padding: $line-height/2 $line-height/4;
+            }
+        }
+    }
+
+    .is-active {
+        .tabs-component-tab-a {
+            background-color: $color-white-milk;
+            color: $color-green-main;
+        }
+    }
+
+    .tabs-component-panels {
+        .tab-content {
+            padding: $line-height/2 $line-height/3;
+        }
+    }
+}

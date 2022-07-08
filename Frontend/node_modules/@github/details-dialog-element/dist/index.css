@@ -1,0 +1,13 @@
+/* This lives outside of element so it can work without JS */
+details-dialog {
+  position: fixed;
+  margin: 10vh auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 999;
+  max-height: 80vh;
+  max-width: 90vw;
+  width: 448px;
+  overflow: auto;
+}
